@@ -14,7 +14,7 @@ let musics = [
     {
         id: 1,
         name: 'All I Want for Christmas is .... (Cardi B)',
-        src: 'christmas2.mp3',
+        src: 'christmascardiB.mp3',
         image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYEzdicIurS07k_fJM0plE_DbtGvJxs6uu6w&usqp=CAU'
     },
     {
