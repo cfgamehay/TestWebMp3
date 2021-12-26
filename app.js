@@ -56,6 +56,7 @@ function start(){
     title.textContent = musics[musicIndex].name
     img.setAttribute('src' ,musics[musicIndex].image)
     playAudio.setAttribute('src',`./music/${musics[musicIndex].src}`)
+    time()
 }
 
 start()
@@ -79,6 +80,7 @@ if (isPlay == true){
 
 //next music
 function nextMusic(){
+    time()
     if(musicIndex == musics.length -1){
         musicIndex = 0;
     }else{
@@ -92,6 +94,7 @@ function nextMusic(){
 }
 //prev music
 function prevMusic(){
+    time()
     if(musicIndex == 0){
         musicIndex = musics.length -1;
     }else{
