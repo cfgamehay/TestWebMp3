@@ -56,7 +56,6 @@ function start(){
     title.textContent = musics[musicIndex].name
     img.setAttribute('src' ,musics[musicIndex].image)
     playAudio.setAttribute('src',`./music/${musics[musicIndex].src}`)
-    time()
 }
 
 start()
@@ -70,18 +69,21 @@ if (isPlay == true){
     playBtn.innerHTML = '<i class="fa-solid fa-pause"></i>'
     timer = setInterval(time , 500)
     header.classList.add('rotate')
+    header.classList.remove('stop')
 }else{
     playAudio.pause()
     isPlay = true;
     playBtn.innerHTML = '<i class="fa-solid fa-play"></i>'
     clearInterval(timer)
-    header.classList.remove('rotate')
+    header.classList.add('stop')
 }} 
 
 //next music
 function nextMusic(){
     time()
+    header.classList.remove('rotate')
     if(musicIndex == musics.length -1){
+        header.classList.remove('stop')
         musicIndex = 0;
     }else{
         musicIndex++
@@ -95,6 +97,7 @@ function nextMusic(){
 //prev music
 function prevMusic(){
     time()
+    header.classList.remove('rotate')
     if(musicIndex == 0){
         musicIndex = musics.length -1;
     }else{
